@@ -16,17 +16,17 @@
     <pre>
 class Solution(object):
     def trap(self, height):
-        """
+        &quot;&quot;&quot;
         :type height: List[int]
         :rtype: int
-        """
+        &quot;&quot;&quot;
         ans=0
         left,right=0,len(height)-1
         leftmax=rightmax=0
-        while(left<right):
+        while(left &lt; right):
             leftmax=max(leftmax,height[left])
             rightmax=max(rightmax,height[right])
-            if height[left]<height[right]:
+            if height[left] &lt; height[right]:
                 ans=ans+leftmax-height[left]
                 left=left+1
             else:
