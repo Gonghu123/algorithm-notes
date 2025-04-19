@@ -44,9 +44,8 @@
 <ul>
   <li><a href="notes/leetcode122.html">Leetcode 122 买卖股票的最佳时机</a></li>
 </ul>
-3.编辑 index.html，添加链接到新笔记：
-
-在合适位置添加一行链接，例如
+3.编辑 index.html，添加链接到新笔记：在合适位置添加一行链接，例如：
 <ul>
   <li><a href="notes/leetcode122.html">Leetcode 122 买卖股票的最佳时机</a></li>
 </ul>
+
