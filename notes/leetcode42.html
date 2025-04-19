@@ -21,17 +21,17 @@ class Solution(object):
         :rtype: int
         """
         ans=0
-        left,right=0,len(height)-1
+        l,r=0,len(height)-1
         leftmax=rightmax=0
-        while(left< right):
-            leftmax=max(leftmax,height[left])
-            rightmax=max(rightmax,height[right])
-            if height[left]<height[right]:
-                ans=ans+leftmax-height[left]
-                left=left+1
+        while(l<r):
+            leftmax=max(leftmax,height[l])
+            rightmax=max(rightmax,height[r])
+            if height[l]<height[r]:
+                ans=ans+leftmax-height[l]
+                l=l+1
             else:
-                ans=ans+rightmax-height[right]
-                right=right-1
+                ans=ans+rightmax-height[r]
+                r=r-1
         return ans
   </pre>
 
