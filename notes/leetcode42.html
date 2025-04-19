@@ -23,7 +23,7 @@ class Solution(object):
         ans=0
         left,right=0,len(height)-1
         leftmax=rightmax=0
-        while(left<right):
+        while(left< right):
             leftmax=max(leftmax,height[left])
             rightmax=max(rightmax,height[right])
             if height[left]<height[right]:
