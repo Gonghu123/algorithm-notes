@@ -7,7 +7,7 @@
 ## 📁 项目结构说明
 
 ---
-
+📁 根目录/ ├── index.html 👉 首页，题目导航页面 ├── script.js 👉 可选脚本，用于交互或增强功能 ├── style.css 👉 网页样式 └── 📁 notes/ 👉 存放每一道题的 HTML 笔记 ├── leetcode11.html ├── leetcode70.html └── ...
 ## ✍ 如何添加一个新题目的笔记
 
 请按照以下步骤进行：
@@ -41,6 +41,12 @@
 </body>
 </html>
 
+<ul>
+  <li><a href="notes/leetcode122.html">Leetcode 122 买卖股票的最佳时机</a></li>
+</ul>
+3.编辑 index.html，添加链接到新笔记：
+
+在合适位置添加一行链接，例如
 <ul>
   <li><a href="notes/leetcode122.html">Leetcode 122 买卖股票的最佳时机</a></li>
 </ul>
