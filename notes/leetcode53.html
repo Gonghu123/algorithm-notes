@@ -11,14 +11,14 @@
     <p><strong>思路：</strong>使用 DP 保存每一步最大值。</p>
 
     <h2>💡 代码：</h2>
-    <pre>
+    <pre><code class="language-python">
 def maxSubArray(nums):
     curr_sum = max_sum = nums[0]
     for n in nums[1:]:
         curr_sum = max(n, curr_sum + n)
         max_sum = max(max_sum, curr_sum)
     return max_sum
-  </pre>
+  </code></pre>
 
     <p><a href="../index.html">⬅ 返回首页</a></p>
 </body>
