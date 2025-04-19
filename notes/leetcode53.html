@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Leetcode 53 最大子序和</title>
+    <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+    <h1>Leetcode 53 最大子序和</h1>
+    <p><strong>题目分类：</strong>动态规划</p>
+    <p><strong>思路：</strong>使用 DP 保存每一步最大值。</p>
+
+    <h2>💡 代码：</h2>
+    <pre>
+def maxSubArray(nums):
+    curr_sum = max_sum = nums[0]
+    for n in nums[1:]:
+        curr_sum = max(n, curr_sum + n)
+        max_sum = max(max_sum, curr_sum)
+    return max_sum
+  </pre>
+
+    <p><a href="../index.html">⬅ 返回首页</a></p>
+</body>
+</html>
