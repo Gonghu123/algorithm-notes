@@ -25,6 +25,15 @@
   <meta charset="UTF-8">
   <title>Leetcode 题号 题目名</title>
   <link rel="stylesheet" href="../style.css">
+   <!-- 引入 highlight.js 样式（你也可以换其它主题） -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+
+   <!-- 引入 highlight.js 脚本 -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+   <!-- 自动初始化高亮 -->
+   <script>hljs.highlightAll();</script>
+
 </head>
 <body>
   <h1>Leetcode 题号 题目名</h1>
@@ -33,9 +42,9 @@
   <p><strong>解题思路：</strong>（简要说明你的思路）</p>
 
   <h2>💻 代码示例：</h2>
-  <pre>
+  <pre><code class="language-python">
 # 你的代码（例如 Python/C++）
-  </pre>
+  </code></pre>
 
   <p><a href="../index.html">⬅ 返回首页</a></p>
 </body>
