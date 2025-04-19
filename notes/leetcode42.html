@@ -2,11 +2,11 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>Leetcode 42 接雨水</title>
+    <title>Leetcode 15 三数之和</title>
     <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
-    <h1>Leetcode 42 接雨水</h1>
+    <h1>Leetcode 15 三数之和</h1>
     <p><strong>题目分类：</strong>双指针</p>
     <p>
         <strong>思路：</strong>使用双指针
@@ -21,17 +21,17 @@ class Solution(object):
         :rtype: int
         """
         ans=0
-        l,r=0,len(height)-1
+        left,right=0,len(height)-1
         leftmax=rightmax=0
-        while(l<r):
-            leftmax=max(leftmax,height[l])
-            rightmax=max(rightmax,height[r])
-            if height[l]<height[r]:
-                ans=ans+leftmax-height[l]
-                l=l+1
+        while(left<right):
+            leftmax=max(leftmax,height[left])
+            rightmax=max(rightmax,height[right])
+            if height[left]<height[right]:
+                ans=ans+leftmax-height[left]
+                left=left+1
             else:
-                ans=ans+rightmax-height[r]
-                r=r-1
+                ans=ans+rightmax-height[right]
+                right=right-1
         return ans
   </pre>
 
