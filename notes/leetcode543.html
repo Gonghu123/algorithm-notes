@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Leetcode 543 树直径</title>
+    <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+    <h1>Leetcode 543 树直径</h1>
+    <p><strong>题目分类：</strong>树</p>
+    <p>
+        <strong>思路：</strong>我们定义一个递归函数 depth(node) 计算 dnode，函数返回该节点为根的子树的深度。先递归调用左儿子和右儿子求得它们为根的子树的深度 L 和 R ，则该节点为根的子树的深度即为 </p>
+    <p>max(L,R)+1该节点的 d node值为L+R+1递归搜索每个节点并设一个全局变量 ans 记录 d node的最大值，最后返回 ans-1 即为树的直径。
+
+
+
+
+    </p>
+
+    <h2>💡 代码：</h2>
+    <pre><code class="language-python">
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution(object):
+    def diameterOfBinaryTree(self, root):
+        """
+        :type root: Optional[TreeNode]
+        :rtype: int
+        """
+        self.ans=1
+        def depth(node):
+            if not node:
+                return 0
+            l=depth(node.left)
+            r=depth(node.right)
+            self.ans=max(self.ans,l+r+1)
+            return max(l,r)+1
+        depth(root)
+        return self.ans-1
+        
+
+        
+        
+            
+
+        
+
+        
+            
+        
+  </code></pre>
+
+    <p><a href="../index.html">⬅ 返回首页</a></p>
+</body>
+</html>
