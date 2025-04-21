@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Leetcode 101 对称树</title>
+    <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+    <h1>Leetcode 101 对称树</h1>
+    <p><strong>题目分类：</strong>树</p>
+    <p>
+        <strong>思路：</strong>要递归的比较左子树和右子树。
+   
+
+
+
+
+    </p>
+
+    <h2>💡 代码：</h2>
+    <pre><code class="language-python">
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution(object):
+    def isSymmetric(self, root):
+        """
+        :type root: Optional[TreeNode]
+        :rtype: bool
+        """
+        if not root:
+            return True
+        def dfs(left,right):
+            if not (left or right):
+                return True
+            if not (left and right):
+                return False
+            if left.val!=right.val:
+                return False
+            return dfs(left.left,right.right) and dfs(left.right,right.left)
+        return dfs(root.left,root.right) 
+        
+        
+
+        
+        
+            
+
+        
+
+        
+            
+        
+  </code></pre>
+
+    <p><a href="../index.html">⬅ 返回首页</a></p>
+</body>
+</html>
