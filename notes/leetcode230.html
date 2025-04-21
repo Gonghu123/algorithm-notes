@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Leetcode 230 二叉搜索树中第K小的元素</title>
+    <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+    <h1>Leetcode 230 二叉搜索树中第K小的元素</h1>
+    <p><strong>题目分类：</strong>树</p>
+    <p>
+        <strong>思路：</strong>因为二叉搜索树和中序遍历的性质，所以二叉搜索树的中序遍历是按照键增加的顺序进行的。于是，我们可以通过中序遍历找到第 k 个最小元素。
+    </p>
+
+    <h2>💡 代码：</h2>
+    <pre><code class="language-python">
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution(object):
+    def kthSmallest(self, root, k):
+        """
+        :type root: Optional[TreeNode]
+        :type k: int
+        :rtype: int
+        """
+        stack=[]
+        while root or stack:
+            while root:
+                stack.append(root)
+                root=root.left
+            root=stack.pop()
+            k=k-1
+            if k==0:
+                return root.val
+            root=root.right
+
+        
+            
+        
+  </code></pre>
+
+    <p><a href="../index.html">⬅ 返回首页</a></p>
+</body>
+</html>
