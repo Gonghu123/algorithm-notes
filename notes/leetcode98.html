@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Leetcode 98 验证二叉搜索树</title>
+    <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+    <h1>Leetcode 98 验证二叉搜索树</h1>
+    <p><strong>题目分类：</strong>树</p>
+    <p>
+        <strong>思路：</strong>如果该二叉树的左子树不为空，则左子树上所有节点的值均小于它的根节点的值； 若它的右子树不空，则右子树上所有节点的值均大于它的根节点的值；它的左右子树也为二叉搜索树。
+
+
+    </p>
+
+    <h2>💡 代码：</h2>
+    <pre><code class="language-python">
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution(object):
+    def isValidBST(self, root):
+        """
+        :type root: Optional[TreeNode]
+        :rtype: bool
+        """
+        def helper(node,lower=float('-inf'),upper=float('inf')):
+            if not node:
+                return True
+            val=node.val
+            if val<=lower or val>=upper:
+                return False
+            if not helper(node.right,val,upper):
+                return False
+            if not helper(node.left,lower,val):
+                return False
+            return True
+        return helper(root)
+            
+
+        
+
+        
+            
+        
+  </code></pre>
+
+    <p><a href="../index.html">⬅ 返回首页</a></p>
+</body>
+</html>
