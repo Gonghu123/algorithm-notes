@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Leetcode 102 层序遍历</title>
+    <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+    <h1>Leetcode 102 层序遍历</h1>
+    <p><strong>题目分类：</strong>树</p>
+    <p>
+        <strong>思路：</strong>广度优先遍历是按层层推进的方式，遍历每一层的节点。题目要求的是返回每一层的节点值，所以这题用广度优先来做非常合适。
+
+
+    </p>
+
+    <h2>💡 代码：</h2>
+    <pre><code class="language-python">
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution(object):
+    def levelOrder(self, root):
+        """
+        :type root: Optional[TreeNode]
+        :rtype: List[List[int]]
+        """
+        if not root:
+            return []
+        res=[]
+        queue=[root]
+        while queue:
+            size=len(queue)
+            tmp=[]
+            for _ in xrange(size):
+                r=queue.pop(0)
+                tmp.append(r.val)
+                if r.left:
+                    queue.append(r.left)
+                if r.right:
+                    queue.append(r.right)
+            res.append(tmp)
+        return res
+
+        
+        
+            
+
+        
+
+        
+            
+        
+  </code></pre>
+
+    <p><a href="../index.html">⬅ 返回首页</a></p>
+</body>
+</html>
